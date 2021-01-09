@@ -2,8 +2,10 @@
 
 ```
 cd ${GIT_REPOSITORY}
-git log --since 2020 --name-status | grep -P "^[AM]\t" | cut -f 2 | sort | uniq -c | sort --ignore-leading-blanks --numeric-sort --reverse | sed "s/^[ \t]*//" > stats.txt
+git log --since 2020-01-01 --until 2020-12-31 --name-status | grep -P "^[AM]\t" | cut -f 2 | sort | uniq -c | sed "s/^[ \t]*//" > stats.txt
 ```
+
+`stats.txt` contains list for year 2020. Each line uses the format `qty path`.
 
 # Outputs statistics
 
