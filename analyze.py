@@ -1,7 +1,7 @@
 import pprint
 
 RUN_TESTS = False
-
+DISPLAY_MAX_DEPTH = 2
 
 class Node:
 
@@ -34,7 +34,7 @@ class Node:
                 return child
 
     def pprint(self, depth=0):
-        if depth > 1:
+        if depth > DISPLAY_MAX_DEPTH:
             return
         indent = "    " * depth
         print("{indent}{node}".format(node=self, indent=indent))
