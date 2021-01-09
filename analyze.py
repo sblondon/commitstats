@@ -1,7 +1,7 @@
 import pprint
 
-RUN_TESTS = False
 DISPLAY_MAX_DEPTH = 2
+
 
 class Node:
 
@@ -129,8 +129,5 @@ class TestTree(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    if RUN_TESTS:
-        unittest.main()
-    else:
-        tree = get_tree()
-        tree.pprint()
+    tree = get_tree()
+    tree.pprint()
