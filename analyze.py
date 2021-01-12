@@ -52,7 +52,6 @@ class Tree:
         self.all_nodes = [self.nroot]
 
     def pprint(self):
-        print("Tree:")
         self.nroot.pprint()
 
     def add(self, path, qty):
